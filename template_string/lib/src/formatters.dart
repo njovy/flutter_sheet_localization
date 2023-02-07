@@ -34,15 +34,15 @@ class NumFormatter extends StringTemplateFormatter {
     final number = value as num;
     switch (format) {
       case 'scientificPattern':
-        return NumberFormat.scientificPattern(locale.toString()).format(number);
+        return NumberFormat.scientificPattern(locale?.toString()).format(number);
       case 'percentPattern':
-        return NumberFormat.percentPattern(locale.toString()).format(number);
+        return NumberFormat.percentPattern(locale?.toString()).format(number);
       case 'decimalPercentPattern':
-        return NumberFormat.decimalPattern(locale.toString()).format(number);
+        return NumberFormat.decimalPattern(locale?.toString()).format(number);
       case 'compact':
-        return NumberFormat.compact(locale: locale.toString()).format(number);
+        return NumberFormat.compact(locale: locale?.toString()).format(number);
       default:
-        return NumberFormat(format, locale.toString()).format(number);
+        return NumberFormat(format, locale?.toString()).format(number);
     }
   }
 }

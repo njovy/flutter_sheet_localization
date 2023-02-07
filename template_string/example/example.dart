@@ -12,7 +12,6 @@ void main() {
         'score': 67.8,
         'date': DateTime.now(),
       },
-      locale: 'en',
     ),
   );
 }
